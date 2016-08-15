@@ -1,0 +1,20 @@
+<li class="media">
+  <div class="media-left">
+    {{#if node.children}}
+      {{fa-icon "folder" size="lg"}}
+    {{else}}
+      {{fa-icon "file" size="lg"}}
+    {{/if}}
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{node.name}}</h4>
+    {{node.description}}
+  </div>
+  {{#if node.children}}
+    <ul>
+      {{#each node.children as |taxon|}}
+        {{taxonomy-node node=taxon}}
+      {{/each}}
+    </ul>
+  {{/if}}
+</li>

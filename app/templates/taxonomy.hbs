@@ -1,0 +1,15 @@
+<div class="padding">
+  <form class="form-inline" role="search">
+    <div class="form-group">
+      {{input type="text" class="form-control" value=search}}
+    </div>
+  </form>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <ul class="media-list">
+      {{taxonomy-tree nodes=model search=search}}
+    </ul>
+  </div>
+</div>
